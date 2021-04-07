@@ -79,6 +79,18 @@ Keep it simple - if you need to add a lot of content, consider showing it on the
 
 Users are not always notified when conditionally revealed content is expanded or collapsed. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html). We plan to fix this issue by the end of March 2021.
 
+### Including a ‘None of the above’ option
+
+Sometimes it is better to allow users to explicitly say that none of the options apply, rather than leaving them all unchecked. This can also help prevent users unintentionally not answering the question.
+
+The “None” option should appear last in the list, and be separated from the other options using an “or” divider.
+
+Adding the `exclusive` behaviour to the "None" checkbox enables some javascript which unselects all other checkboxes when checking this box.
+
+{{ example({group: "components", item: "checkboxes", example: "with-none-option", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+If javascript is unavailable, and a user selects both the ‘None’ checkbox and another checkbox, display an error message (see below).
+
 ### Smaller checkboxes
 
 Use standard-sized checkboxes in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.  
@@ -108,6 +120,11 @@ For example, ‘Select if you are British, Irish or a citizen of a different cou
 
 Say ‘Select [whatever it is]’.<br>
 For example, ‘Select your nationality or nationalities’.
+
+#### If both a ‘None’ checkbox and another checkbox are checked
+
+Say ‘Select [whatever it is] or select ”[label of None checkbox]”’<br>
+For example, ‘Select countries you will be travelling to, or select “No, I will not be travelling to any of these countries”’
 
 ## Research on this component
 
