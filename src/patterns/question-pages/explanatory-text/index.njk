@@ -1,0 +1,60 @@
+---
+title: Explanatory text – Question pages
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Add undergraduate degree
+      </h1>
+
+      <p class="govuk-body">
+        You need an undergraduate degree to apply for teacher training. If you have further degrees, you can add them later.
+      </p>
+
+      <form action="/form-handler" method="post" novalidate>
+
+        {{ govukRadios({
+          idPrefix: "type-of-degree",
+          name: "type-of-degree",
+          fieldset: {
+            legend: {
+              text: "What type of degree do you want to add?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "uk-degree",
+              text: "UK degree"
+            },
+            {
+              value: "non-uk-degree",
+              text: "Non UK degree"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
