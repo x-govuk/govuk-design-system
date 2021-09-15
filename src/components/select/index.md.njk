@@ -21,6 +21,8 @@ The select component allows users to choose an option from a long list. Before u
 
 Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as [radios](../radios/).
 
+In the select component, an option is always selected, even when a user sees it for the first time. This is because its options are settings - unlike the options in radios and [checkboxes](https://design-system.service.gov.uk/components/checkboxes/), which are answers to questions.
+
 There are 2 ways to use the select component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com),  you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
