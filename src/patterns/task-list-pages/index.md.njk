@@ -75,6 +75,32 @@ For example, you could group all tasks which help users find out if your service
 
 Where possible, allow users to complete tasks in any order. This will help them plan their time and complete sections as and when they can.
 
+### Marking tasks as completed
+
+Give the user control over whether a task is completed or not when:
+
+* some of the questions are optional
+* there is a textarea which may take longer to complete
+* the answer requires a list of things such as previous jobs
+* answers need checking carefully with a third party
+
+In these cases, ask the user whether they have completed the task, or need to come back to it later:
+
+![A screenshot showing a question that says 'Have you completed this section?'](have-you-completed-this-section.png)
+
+Add the question to your check your answers page when there are multiple tasks in a section or as the last question if the task is on a single page.
+
+If the user doesn’t select an option, display an error message:
+
+![A screenshot showing a question that says 'Have you completed this section?'](have-you-completed-this-section-error.png)
+
+If the user selects “No, I’ll come back to it later”, mark the task as “Incomplete” or “In progress”.
+
+If the user selects “Yes, I have completed this section”, then mark the task as complete.
+
+Users should be able to go back into a task and change their answer.
+
+
 ## Research on this pattern
 
 This pattern was originally developed and tested by a team at the Government Digital Service (GDS).
